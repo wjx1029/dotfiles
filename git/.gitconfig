@@ -1,0 +1,25 @@
+[user]
+	email = wanjx0701@gmail.com
+	name = sean
+[safe]
+	directory = *
+[init]
+	defaultBranch = main
+
+[alias]
+    co = checkout
+    br = branch
+    cm = commit -m
+    cam = commit -am
+    st = status
+    unstage = reset HEAD --
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # 查看当前分支的提交树（更简洁）
+    tree = log --graph --oneline --all
+
+    # 显示最后 n 次提交
+    last =  log -1 HEAD
+
+    # 搜索包含某关键词的提交
+    find = grep
+    s =  status -s
