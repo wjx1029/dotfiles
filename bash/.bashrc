@@ -177,7 +177,7 @@ export PATH="/home/sean/.local/bin/mycmd:$PATH"
 export EDITOR=vim
 
 
- ."$HOME/.local/bin/env"
+# ."$HOME/.local/bin/env"
 
 
 # Hermes Agent — ensure ~/.local/bin is on PATH
