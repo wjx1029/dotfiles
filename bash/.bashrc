@@ -170,14 +170,15 @@ check_permission() {
 # 紧凑色块样式
 
 
-PS1="${fg_green}✨ \u${reset} ${fg_blue}🖥️  \h${reset} ${fg_cyan}⏰ \$(date +'%H:%M')${reset} ${fg_yellow}📂 \w${reset}${fg_magenta}\$(parse_git_branch)${reset} ${fg_white}\$(check_permission)${reset}\n${fg_green}➤ ${reset} "
+PS1="${fg_green}✨ \u${reset} ${fg_blue}🖥️ \h${reset} ${fg_cyan}⏰ \$(date +'%H:%M')${reset} ${fg_yellow}📂 \w${reset}${fg_magenta}\$(parse_git_branch)${reset} ${fg_white}\$(check_permission)${reset}\n${fg_green}➤ ${reset} "
 
-
+# enviorment variables
 export PATH="/home/sean/.local/bin/mycmd:$PATH"
+export EDITOR=vim
 
 
+ ."$HOME/.local/bin/env"
 
-. "$HOME/.local/bin/env"
 
 # Hermes Agent — ensure ~/.local/bin is on PATH
 export PATH="$HOME/.local/bin:$PATH"
@@ -204,3 +205,6 @@ alias gs='git status'
 alias gm='git commit -m'
 alias gam='git commit -am'
 alias gp='git push'
+
+# welcome
+[ -f ~/.welcome.py ] && python3 ~/.welcome.py
