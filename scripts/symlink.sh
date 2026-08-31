@@ -10,6 +10,7 @@ declare -A MAP=(
     ["$DOTFILES_DIR/zsh/.zshrc"]="$TARGET_DIR/.zshrc"
     ["$DOTFILES_DIR/git/.gitconfig"]="$TARGET_DIR/.gitconfig"
     ["$DOTFILES_DIR/vim/.vimrc"]="$TARGET_DIR/.vimrc"
+    ["$DOTFILES_DIR/tmux/.tmux.conf"]="$TARGET/.tmux.conf"
 )
 
 for src in "${!MAP[@]}"; do

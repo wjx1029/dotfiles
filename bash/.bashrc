@@ -173,7 +173,7 @@ check_permission() {
 PS1="${fg_green}✨ \u${reset} ${fg_blue}🖥️  \h${reset} ${fg_cyan}⏰ \$(date +'%H:%M')${reset} ${fg_yellow}📂 \w${reset}${fg_magenta}\$(parse_git_branch)${reset} ${fg_white}\$(check_permission)${reset}\n${fg_green}➤ ${reset} "
 
 
-
+export PATH="/home/sean/.local/bin/mycmd:$PATH"
 
 
 
@@ -199,6 +199,8 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # git alias
+alias ga='git add'
 alias gs='git status'
 alias gm='git commit -m'
 alias gam='git commit -am'
+alias gp='git push'
