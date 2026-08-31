@@ -10,7 +10,7 @@ declare -A MAP=(
     ["$DOTFILES_DIR/zsh/.zshrc"]="$TARGET_DIR/.zshrc"
     ["$DOTFILES_DIR/git/.gitconfig"]="$TARGET_DIR/.gitconfig"
     ["$DOTFILES_DIR/vim/.vimrc"]="$TARGET_DIR/.vimrc"
-    ["$DOTFILES_DIR/tmux/.tmux.conf"]="$TARGET/.tmux.conf"
+    ["$DOTFILES_DIR/tmux/.tmux.conf"]="$TARGET_DIR/.tmux.conf"
 )
 
 for src in "${!MAP[@]}"; do
@@ -25,8 +25,7 @@ done
 
 
 # 复制命令到.local/bin/mycmd
-mkdir -p "$HOME/.local/bin/mycmd"
-cp "$HOME/dotfiles/my_cmd/*" "$HOME/.local/bin/mycmd/"
+cp -r "$HOME/dotfiles/my_cmd" "$HOME/.local/bin/mycmd"
 
 
 
