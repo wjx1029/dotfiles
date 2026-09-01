@@ -78,3 +78,34 @@ set mouse+=a
 " inoremap <Right> <ESC>:echoe "Use l"<CR>
 " inoremap <Up>    <ESC>:echoe "Use k"<CR>
 " inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" 自动补全括号
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap < <><Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+
+
+" 针对花括号的智能换行（核心功能）
+" 当光标在 {} 中间时按下回车，自动换行并缩进
+inoremap <expr> <CR> col('.') > 1 && getline('.')[col('.')-2] == '}' ? "<CR><C-o>O" : "<CR>"
+
+	
+" Tab 键宽度
+set tabstop=4
+" 缩进宽度（>> 和 << 命令的步长）
+set shiftwidth=4
+" 软制表符宽度（退格键一次删 4 个空格）
+set softtabstop=4
+" 使用空格代替 Tab
+set expandtab
+" 自动缩进
+set autoindent
+set smartindent
+
+
+
+
