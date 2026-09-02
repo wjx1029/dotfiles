@@ -205,6 +205,8 @@ alias gs='git status'
 alias gm='git commit -m'
 alias gam='git commit -am'
 alias gp='git push'
+alias gl='git lg'
+alias gtree='git tree'
 
 # welcome
-[ -f ~/.welcome.py ] && python3 ~/.welcome.py
+# [ -f ~/.welcome.py ] && python3 ~/.welcome.py
