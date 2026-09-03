@@ -24,8 +24,8 @@ for src in "${!MAP[@]}"; do
 done
 
 
-# 复制命令到.local/bin/mycmd
-cp -r "$HOME/dotfiles/my_cmd" "$HOME/.local/bin/mycmd"
+# 复制命令到.local/bin
+cp -r "$HOME/dotfiles/mycmd" "$HOME/.local/bin/"
 
 
 
