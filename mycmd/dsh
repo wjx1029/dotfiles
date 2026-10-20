@@ -1,5 +1,4 @@
 
-
-npx @deepseek-ai/dsh web
+dsh web
 
 
